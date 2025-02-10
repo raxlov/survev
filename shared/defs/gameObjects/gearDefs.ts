@@ -102,6 +102,27 @@ const ChestDefs: Record<string, ChestDef> = {
             pickup: "chest_pickup_01",
         },
     },
+    chestDev: {
+        name: "Level Dev Vest",
+        type: "chest",
+        noDrop: true,
+        level: "Dev",
+        damageReduction: 1,
+        skinImg: {
+            baseTint: 1846790,
+            baseSprite: "player-armor-base-01.img",
+        },
+        lootImg: {
+            sprite: "loot-chest-03.img",
+            tint: 0xffffff,
+            border: "loot-circle-outer-01.img",
+            borderTint: 0,
+            scale: 0.2,
+        },
+        sound: {
+            pickup: "chest_pickup_01",
+        },
+    },
 };
 
 export interface HelmetDef {
@@ -214,6 +235,28 @@ const HelmetDefs: Record<string, HelmetDef> = {
             pickup: "helmet_pickup_01",
         },
     },
+    helmetDev: {
+        name: "Level Dev Helmet",
+        type: "helmet",
+        level: "Dev",
+        damageReduction: 1,
+        skinImg: {
+            baseTint: 2434341,
+            baseTintRed: 2491396,
+            baseTintBlue: 334125,
+            baseSprite: "player-circle-base-01.img",
+        },
+        lootImg: {
+            sprite: "loot-helmet-03.img",
+            tint: 0xffffff,
+            border: "loot-circle-outer-01.img",
+            borderTint: 0,
+            scale: 0.2,
+        },
+        sound: {
+            pickup: "helmet_pickup_01",
+        },
+    },
 };
 
 export interface BackpackDef {
@@ -297,6 +340,23 @@ const BackpackDefs: Record<string, BackpackDef> = {
             pickup: "pack_pickup_01",
         },
     },
+    backpackDev: {
+        name: "Dev Backpack",
+        type: "backpack",
+        level: "Dev",
+        tint: 6710835,
+        playerRad: 1,
+        lootImg: {
+            sprite: "loot-pack-03.img",
+            tint: 0xffffff,
+            border: "loot-circle-outer-01.img",
+            borderTint: 0,
+            scale: 0.2,
+        },
+        sound: {
+            pickup: "pack_pickup_01",
+        },
+    },
 };
 
 export interface BoostDef {
@@ -341,6 +401,28 @@ const BoostDefs: Record<string, BoostDef> = {
         type: "boost",
         useTime: 5,
         boost: 50,
+        lootImg: {
+            sprite: "loot-medical-pill.img",
+            tint: 0xffffff,
+            border: "loot-circle-outer-01.img",
+            borderTint: 0,
+            scale: 0.2,
+        },
+        sound: {
+            pickup: "pills_pickup_01",
+            use: "pills_use_01",
+        },
+        emitter: "boost",
+        aura: {
+            sprite: "part-aura-circle-01.img",
+            tint: 1676544,
+        },
+    },
+    DevPotion: {
+        name: "Dev Potion",
+        type: "boost",
+        useTime: 0,
+        boost: 9999999999999999999,
         lootImg: {
             sprite: "loot-medical-pill.img",
             tint: 0xffffff,
@@ -421,6 +503,29 @@ const HealDefs: Record<string, HealDef> = {
         useTime: 6,
         heal: 100,
         maxHeal: 100,
+        lootImg: {
+            sprite: "loot-medical-healthkit.img",
+            tint: 0xffffff,
+            border: "loot-circle-outer-01.img",
+            borderTint: 0,
+            scale: 0.2,
+        },
+        sound: {
+            pickup: "healthkit_pickup_01",
+            use: "healthkit_use_01",
+        },
+        emitter: "heal",
+        aura: {
+            sprite: "part-aura-circle-01.img",
+            tint: 16711680,
+        },
+    },
+    DevMedkit: {
+        name: "Dev Medkit",
+        type: "heal",
+        useTime: 0,
+        heal: 9999999999999999999,
+        maxHeal: 9999999999999999999,
         lootImg: {
             sprite: "loot-medical-healthkit.img",
             tint: 0xffffff,
@@ -585,6 +690,21 @@ const AmmoDefs: Record<string, AmmoDef> = {
             pickup: "ammo_pickup_01",
         },
     },
+    "Death": {
+        name: "Dealy Ammo",
+        type: "ammo",
+        special: true,
+        minStackSize: 1,
+        lootImg: {
+            sprite: "loot-ammo-box.img",
+            scale: 0.2,
+            tint: 2697513,
+            tintDark: 2039583,
+        },
+        sound: {
+            pickup: "ammo_pickup_01",
+        },
+    },
 };
 
 const BaseDefs = {
@@ -667,10 +787,10 @@ const ScopeDefs: Record<string, ScopeDef> = {
             pickup: "scope_pickup_01",
         },
     },
-    "15xscope": {
-        name: "15x Scope",
+    "16xscope": {
+        name: "16x Scope",
         type: "scope",
-        level: 15,
+        level: 16,
         lootImg: {
             sprite: "loot-scope-04.img",
             tint: 0xffffff,

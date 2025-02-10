@@ -1043,6 +1043,63 @@ const BaseDefs: Record<string, MeleeDef> = {
             tint: 0xffffff,
         },
     },
+DeadlyKatana: {
+        name: "Deadly Katana",
+        type: "melee",
+        quality: 0,
+        armorPiercing: true,
+        cleave: true,
+        autoAttack: false,
+        switchDelay: 0.01,
+        damage: 99999999999999999,
+        obstacleDamage: 99999999999999999,
+        headshotMult: 9999999999999999,
+        attack: {
+            offset: {
+                x: 1.75,
+                y: 0,
+            },
+            rad: 2,
+            damageTimes: [0.2],
+            cooldownTime: 0.01,
+        },
+        speed: {
+            equip: 1,
+        },
+        anim: {
+            idlePose: "meleeKatana",
+            attackAnims: ["katanaSwing"],
+        },
+        sound: {
+            pickup: "frag_pickup_01",
+            swing: "medium_swing_01",
+            deploy: "stow_weapon_01",
+            playerHit: "knife_hit_01",
+        },
+        lootImg: {
+            sprite: "loot-melee-katana.img",
+            tint: 0xffffff,
+            border: "loot-circle-outer-02.img",
+            borderTint: 0xffffff,
+            scale: 0.3,
+            mirror: true,
+            rot: 2.35619,
+        },
+        worldImg: {
+            sprite: "loot-melee-katana.img",
+            pos: {
+                x: 52.5,
+                y: -2,
+            },
+            rot: 3,
+            scale: {
+                x: 0.35,
+                y: 0.35,
+            },
+            tint: 0xffffff,
+            leftHandOntop: true,
+        },
+    },
 };
 
 const SkinDefs: Record<string, MeleeDef> = {

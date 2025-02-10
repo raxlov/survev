@@ -47,6 +47,7 @@ type DefaultItems = {
         "12gauge": number;
         "50AE": number;
         "308sub": number;
+        "Death": number;
         flare: number;
         "45acp": number;
         frag: number;
@@ -57,13 +58,15 @@ type DefaultItems = {
         potato: number;
         bandage: number;
         healthkit: number;
+        DevMedkit: number;
         soda: number;
         painkiller: number;
+        DevPoition: number;
         "1xscope": number;
         "2xscope": number;
         "4xscope": number;
         "8xscope": number;
-        "15xscope": number;
+        "16xscope": number;
     };
 };
 
@@ -121,6 +124,7 @@ function createDefaultItems<T extends DefaultItems>(e: DeepPartial<T>): T {
             "12gauge": 0,
             "50AE": 0,
             "308sub": 0,
+            "Death": 0,
             flare: 0,
             "45acp": 0,
             frag: 0,
@@ -131,13 +135,15 @@ function createDefaultItems<T extends DefaultItems>(e: DeepPartial<T>): T {
             potato: 0,
             bandage: 0,
             healthkit: 0,
+            DevMedkit: 0,
             soda: 0,
             painkiller: 0,
+            DevPotion: 0,
             "1xscope": 1,
             "2xscope": 0,
             "4xscope": 0,
             "8xscope": 0,
-            "15xscope": 0,
+            "16xscope": 0,
         },
     };
     return util.mergeDeep(defaultItems, e || {});

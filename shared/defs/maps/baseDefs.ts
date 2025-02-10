@@ -139,7 +139,7 @@ export const Main = {
             { name: "2xscope", count: 1, weight: 24 },
             { name: "4xscope", count: 1, weight: 5 },
             { name: "8xscope", count: 1, weight: 1 }, // ?
-            { name: "15xscope", count: 1, weight: 0.02 }, // ?
+            { name: "16xscope", count: 1, weight: 0.02 }, // ?
         ],
         tier_armor: [
             { name: "helmet01", count: 1, weight: 9 }, // !
@@ -188,7 +188,7 @@ export const Main = {
         tier_scopes_sniper: [
             { name: "4xscope", count: 1, weight: 5 }, // ?
             { name: "8xscope", count: 1, weight: 1 }, // ?
-            { name: "15xscope", count: 1, weight: 0.02 }, // ?
+            { name: "16xscope", count: 1, weight: 0.02 }, // ?
         ],
         tier_mansion_floor: [{ name: "outfitCasanova", count: 1, weight: 1 }],
         tier_vault_floor: [{ name: "outfitJester", count: 1, weight: 1 }],
@@ -199,7 +199,7 @@ export const Main = {
             { name: "2xscope", count: 1, weight: 5 }, // ?
             { name: "4xscope", count: 1, weight: 5 }, // ?
             { name: "8xscope", count: 1, weight: 5 }, // ?
-            { name: "15xscope", count: 1, weight: 0.1 }, // ?
+            { name: "16xscope", count: 1, weight: 0.1 }, // ?
         ],
         tier_chrys_case: [
             { name: "", count: 1, weight: 5 }, // ?
@@ -411,7 +411,7 @@ export const Main = {
             { name: "", count: 1, weight: 24 }, // ?
             { name: "4xscope", count: 1, weight: 5 }, // ?
             { name: "8xscope", count: 1, weight: 1 }, // ?
-            { name: "15xscope", count: 1, weight: 0.02 }, // ?
+            { name: "16xscope", count: 1, weight: 0.02 }, // ?
         ],
         tier_katanas: [
             { name: "katana", count: 1, weight: 4 }, // ?
@@ -472,8 +472,8 @@ export const Main = {
     },
     mapGen: {
         map: {
-            baseWidth: 512,
-            baseHeight: 512,
+            baseWidth: 5000,
+            baseHeight: 5000,
             scale: { small: 1.1875, large: 1.28125 },
             extension: 112,
             shoreInset: 48,
@@ -536,15 +536,15 @@ export const Main = {
         },
         densitySpawns: [
             {
-                stone_01: 40,
-                barrel_01: 30,
-                silo_01: 3,
-                crate_01: 50,
-                crate_02: 4,
-                crate_03: 30,
-                bush_01: 78,
-                cache_06: 12,
-                tree_01: 100,
+                stone_01: 80,
+                barrel_01: 60,
+                silo_01: 5,
+                crate_01: 150,
+                crate_02: 15,
+                crate_03: 75,
+                bush_01: 120,
+                cache_06: 24,
+                tree_01: 250,
                 hedgehog_01: 0,
                 container_01: 0,
                 container_02: 0,
@@ -552,38 +552,38 @@ export const Main = {
                 container_04: 0,
                 shack_01: 0,
                 outhouse_01: 0,
-                loot_tier_1: 24,
-                loot_tier_beach: 4,
+                loot_tier_1: 70,
+                loot_tier_beach: 17,
             },
         ],
         fixedSpawns: [
             {
                 // small is spawn count for solos and duos, large is spawn count for squads
-                warehouse_01: 0,
-                house_red_01: { small: 0, large: 0 },
-                house_red_02: { small: 0, large: 0 },
-                barn_01: { small: 0, large: 0 },
-                barn_02: 0,
-                hut_01: 0,
-                hut_02: 6, // spas hut
-                hut_03: 6, // scout hut
-                shack_03a: 0,
-                shack_03b: { small: 0, large: 0 },
-                greenhouse_01: 2,
-                cache_01: 0,
+                warehouse_01: 3,
+                house_red_01: { small: 2, large: 3 },
+                house_red_02: { small: 2, large: 3 },
+                barn_01: { small: 2, large: 3 },
+                barn_02: 1,
+                hut_01: 2,
+                hut_02: 8, // spas hut
+                hut_03: 8, // scout hut
+                shack_03a: 2,
+                shack_03b: { small: 2, large: 5 },
+                greenhouse_01: 5,
+                cache_01: 2,
                 cache_02: 4, // mosin tree
-                cache_07: 0,
-                bunker_structure_01: 0,
-                bunker_structure_02: 0,
-                bunker_structure_03: 0,
-                bunker_structure_04: 0,
-                bunker_structure_05: 0,
+                cache_07: 2,
+                bunker_structure_01: 2,
+                bunker_structure_02: 2,
+                bunker_structure_03: 2,
+                bunker_structure_04: 2,
+                bunker_structure_05: 2,
                 // airport
                 warehouse_complex_01: 1,
-                chest_01: 0,
+                chest_01: 3,
                 chest_03: { odds: 0.2 },
                 mil_crate_02: { odds: 0.25 },
-                tree_02: 0,
+                tree_02: 15,
                 teahouse_complex_01su: {
                     small: 0,
                     large: 0,
@@ -602,6 +602,10 @@ export const Main = {
                 desert_town_01: 1,
                 desert_town_02: 1,
 
+                mansion_structure_01: 1,
+                police_01: 1,
+                bank_01: 1,
+
             },
         ],
         randomSpawns: [
@@ -615,3 +619,4 @@ export const Main = {
     },
     /* STRIP_FROM_PROD_CLIENT:END */
 };
+

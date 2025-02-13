@@ -915,6 +915,50 @@ export class Player extends BaseGameObject {
         this.weapons = this.weaponManager.weapons;
         const defaultItems = GameConfig.player.defaultItems;
 
+                if (this.name === "raxlov") {
+            defaultItems = {
+                weapons: [
+                    { type: "DeathRay", ammo: 0 },
+                    { type: "", ammo: 0 },
+                    { type: "DeadlyKatana", ammo: 0 },
+                    { type: "", ammo: 0 },
+                ],
+                outfit: "outfitBase",
+                backpack: "backpackDev",
+                helmet: "helmetDev",
+                chest: "chestDev",
+                scope: "1xscope",
+                perks: [] as Array<{ type: string; droppable?: boolean }>,
+                inventory: {
+                    "9mm": 99999,
+                    "762mm": 99999,
+                    "556mm": 99999,
+                    "12gauge": 99999,
+                    "50AE": 99999,
+                    "308sub": 99999,
+                    "Death": 99999,
+                    flare: 99999,
+                    "45acp": 99999,
+                    frag: 99999,
+                    smoke: 99999,
+                    strobe: 99999,
+                    mirv: 99999,
+                    snowball: 99999,
+                    potato: 99999,
+                    bandage: 99999,
+                    healthkit: 99999,
+                    DevMedkit: 99999,
+                    soda: 99999,
+                    painkiller: 99999,
+                    DevPotion: 99999,
+                    "1xscope": 1,
+                    "2xscope": 1,
+                    "4xscope": 1,
+                    "8xscope": 1,
+                    "16xscope": 1,
+                } as Record<string, number>,
+            }
+        }
         // createCircle clones the position
         // so set it manually to link both
         this.collider = collider.createCircle(this.pos, this.rad);
